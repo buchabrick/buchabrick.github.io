@@ -1,87 +1,77 @@
 <!DOCTYPE html>
 <html lang="uk">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Конструктор MUNISTER: Золоті ворота Києва</title>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-    <!-- Хедер -->
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Буча.брік</h1>
-            <nav>
-                <ul class="nav-links">
-                    <li><a href="#product">Про товар</a></li>
-                    <li><a href="#contact">Контакти</a></li>
-                </ul>
-            </nav>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Золоті Ворота Києва | BuchaBrick</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Montserrat', sans-serif;
+        background-color: #121212;
+        color: #e0e0e0;
+      }
+      h1, h2, h3, h4 {
+        font-family: 'Playfair Display', serif;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="bg-[#1e1e1e] shadow-md sticky top-0 z-50">
+      <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+        <h1 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 tracking-wide drop-shadow-md">BuchaBrick</h1>
+        <nav class="space-x-6 text-lg">
+          <a href="#about" class="text-gray-300 hover:text-white transition">Про набір</a>
+        </nav>
+      </div>
     </header>
 
-    <!-- Товар -->
-    <section id="product" class="product-section">
-        <div class="container">
-            <div class="product-card">
-                <div class="product-image">
-                    <img src="images/zoloti-vorota.png" alt="Конструктор Золоті ворота Києва" />
-                </div>
-                <div class="product-details">
-                    <h2>Конструктор MUNISTER: «Золоті ворота Києва»</h2>
-                    <p class="product-code"><strong>Артикул:</strong> 10331</p>
-                    <p class="product-age"><strong>Рекомендовано для віку:</strong> 10+</p>
-                    <p class="product-pieces"><strong>Кількість деталей:</strong> 1240</p>
-                    <p class="product-category"><strong>Категорія:</strong> Історична архітектура України</p>
-                    <div class="product-description">
-                        <p>Поринь у славетну історію Києва, зібравши одну з найвеличніших пам’яток доби Київської Русі — Золоті ворота. Цей набір дозволяє відтворити легендарну оборонну споруду XI століття з точністю до архітектурних деталей.</p>
-                        <p>Відчуй себе будівничим Києва часів Ярослава Мудрого:</p>
-                        <ul>
-                            <li>Справжній вхід до середньовічного міста</li>
-                            <li>Дерев’яні укріплення та муровані арки</li>
-                            <li>Культова надбрамна церква</li>
-                            <li>Кольорові елементи куполів та схилів</li>
-                        </ul>
-                        <p><strong>Набір включає:</strong></p>
-                        <ul>
-                            <li>6 пакетів з деталями, розподіленими за етапами збирання</li>
-                            <li>Ілюстровану інструкцію українською мовою</li>
-                            <li>Спеціальні мініфігурки дружинників і купців</li>
-                            <li>Інтерактивну картку для історичної довідки через мобільний додаток</li>
-                        </ul>
-                        <p>Це не просто гра — це подорож у часі! Створи частину славетного Києва власноруч!</p>
-                    </div>
-                    <a href="#contact" class="btn-primary">Купити зараз</a>
-                </div>
-            </div>
+    <main class="max-w-6xl mx-auto px-6 py-12">
+      <section class="grid md:grid-cols-2 gap-10 items-center">
+        <div class="relative overflow-hidden rounded-2xl shadow-xl">
+          <img src="https://raw.githubusercontent.com/buchabrick/buchabrick.github.io/refs/heads/main/img/goldengate.png" alt="Золоті ворота Києва" class="object-cover w-full rounded-xl" />
         </div>
-    </section>
+        <div>
+          <h2 class="text-4xl font-extrabold text-white mb-6">Золоті Ворота</h2>
+          <p class="mb-6 text-lg leading-relaxed text-gray-300">Поринь у славетну історію Києва, зібравши одну з найвеличніших пам’яток доби Київської Русі — Золоті ворота.</p>
+          <ul class="space-y-3 text-lg list-disc list-inside text-gray-200">
+            <li>Справжній вхід до середньовічного міста</li>
+            <li>Дерев’яні укріплення та муровані арки</li>
+            <li>Культова надбрамна церква</li>
+            <li>Кольорові елементи куполів та схилів</li>
+          </ul>
+          <p class="mt-6 text-sm text-gray-400 italic">550 деталей | Вік: 10+ | Код: 03031</p>
 
-    <!-- Контакти -->
-    <section id="contact" class="contact-section">
-        <div class="container">
-            <h2>Зв'язатися з нами</h2>
-            <form action="mailto:info@buchabrick.com" method="POST" enctype="text/plain">
-                <input type="text" name="name" placeholder="Ваше ім'я" required>
-                <input type="email" name="email" placeholder="Ваш email" required>
-                <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
-                <button type="submit" class="btn-primary">Відправити</button>
-            </form>
+          <div class="mt-8">
+            <a href="https://t.me/buchabrick" target="_blank" class="inline-flex items-center gap-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl transition shadow-lg">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12L21.75 3.75L13.5 21.75L11.25 13.5L2.25 12Z" />
+              </svg>
+              Зв'язатися через Telegram
+            </a>
+          </div>
         </div>
-    </section>
+      </section>
 
-    <!-- Футер -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2025 Буча.брік. Усі права захищені.</p>
+      <section id="about" class="mt-20">
+        <div class="bg-[#1e1e1e] p-8 rounded-3xl shadow-xl border border-gray-700">
+          <h3 class="text-3xl font-semibold mb-6 text-white">Що в коробці:</h3>
+          <ul class="list-disc pl-6 space-y-3 text-gray-300 text-lg">
+            <li>6 пакетів з деталями, розподіленими за етапами збирання</li>
+            <li>Ілюстрована інструкція українською мовою</li>
+            <li>Мініфігурки дружинників і купців</li>
+            <li>Інтерактивна картка для історичної довідки через мобільний додаток</li>
+          </ul>
+          <p class="mt-6 text-gray-400 text-md">Це не просто гра — це подорож у часі! Створи частину славетного Києва власноруч.</p>
         </div>
+      </section>
+    </main>
+
+    <footer class="text-center py-8 text-sm text-gray-500 bg-[#1e1e1e] border-t border-gray-700 mt-20">
+      &copy; 2025 <span class="text-white font-semibold">BuchaBrick</span> — Всі права захищено.
     </footer>
-
-    <script src="scripts/app.js"></script>
-</body>
-
+  </body>
 </html>
