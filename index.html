@@ -9,69 +9,129 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&family=Playfair+Display:wght@600;800&display=swap" rel="stylesheet">
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       body {
         font-family: 'Montserrat', sans-serif;
         background-color: #121212;
-        color: #e0e0e0;
+        color: #d4d4d4;
       }
       h1, h2, h3, h4 {
         font-family: 'Playfair Display', serif;
+      }
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes logoPop {
+        0% { opacity: 0; transform: scale(0.8) rotate(-10deg); }
+        100% { opacity: 1; transform: scale(1) rotate(0); }
+      }
+      .fade-in {
+        animation: fadeIn 0.8s ease-out forwards;
+      }
+      .animate-logo {
+        animation: logoPop 1s ease-out forwards;
       }
     </style>
   </head>
   <body>
     <header class="bg-[#1e1e1e] shadow-md sticky top-0 z-50">
       <div class="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
-        <h1 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 via-orange-400 to-red-500 tracking-wide drop-shadow-md">BuchaBrick</h1>
-        <nav class="space-x-6 text-lg">
+        <h1 class="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-orange-300 to-rose-400 tracking-wide drop-shadow-md animate-logo">
+          BuchaBrick
+        </h1>
+        <nav class="space-x-6 text-lg hidden md:flex">
           <a href="#about" class="text-gray-300 hover:text-white transition">Про набір</a>
+          <a href="#order" class="text-gray-300 hover:text-white transition">Замовити</a>
         </nav>
+        <button onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="text-white md:hidden focus:outline-none">
+          ☰
+        </button>
+      </div>
+      <div id="mobileMenu" class="md:hidden hidden px-6 pb-4">
+        <a href="#about" class="block py-2 text-gray-300 hover:text-white transition">Про набір</a>
+        <a href="#order" class="block py-2 text-gray-300 hover:text-white transition">Замовити</a>
       </div>
     </header>
 
-    <main class="max-w-6xl mx-auto px-6 py-12">
-      <section class="grid md:grid-cols-2 gap-10 items-center">
-        <div class="relative overflow-hidden rounded-2xl shadow-xl">
-          <img src="https://raw.githubusercontent.com/buchabrick/buchabrick.github.io/refs/heads/main/img/goldengate.png" alt="Золоті ворота Києва" class="object-cover w-full rounded-xl" />
+    <main class="max-w-6xl mx-auto px-6 py-10 space-y-20">
+      <section class="grid md:grid-cols-2 gap-10 items-center fade-in">
+        <div class="relative overflow-hidden rounded-3xl shadow-2xl ring-1 ring-amber-500/20">
+          <img src="https://raw.githubusercontent.com/buchabrick/buchabrick.github.io/refs/heads/main/img/goldengate.png" alt="Золоті ворота Києва" class="object-cover w-full h-full rounded-3xl hover:scale-105 transition-transform duration-700" />
         </div>
         <div>
-          <h2 class="text-4xl font-extrabold text-white mb-6">Золоті Ворота</h2>
-          <p class="mb-6 text-lg leading-relaxed text-gray-300">Поринь у славетну історію Києва, зібравши одну з найвеличніших пам’яток доби Київської Русі — Золоті ворота.</p>
-          <ul class="space-y-3 text-lg list-disc list-inside text-gray-200">
+          <h2 class="text-4xl md:text-5xl font-extrabold text-amber-300 drop-shadow-md mb-4">Золоті Ворота</h2>
+          <p class="mb-4 text-lg leading-relaxed text-gray-300">
+            Поринь у славетну історію Києва, зібравши одну з найвеличніших пам’яток доби Київської Русі — Золоті ворота.
+          </p>
+          <ul class="space-y-2 text-lg list-disc list-inside text-gray-200 mb-4">
             <li>Справжній вхід до середньовічного міста</li>
             <li>Дерев’яні укріплення та муровані арки</li>
             <li>Культова надбрамна церква</li>
             <li>Кольорові елементи куполів та схилів</li>
           </ul>
-          <p class="mt-6 text-sm text-gray-400 italic">550 деталей | Вік: 10+ | Код: 03031</p>
-
-          <div class="mt-8">
-            <a href="https://t.me/buchabrick" target="_blank" class="inline-flex items-center gap-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold px-6 py-3 rounded-xl transition shadow-lg">
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12L21.75 3.75L13.5 21.75L11.25 13.5L2.25 12Z" />
-              </svg>
-              Зв'язатися через Telegram
-            </a>
-          </div>
+          <p class="text-sm text-gray-400 italic">550 деталей | Вік: 10+ | Код: 03031</p>
+          <p class="text-sm text-gray-500 mt-1">📏 Розміри моделі: 18 × 14 × 11 см</p>
         </div>
       </section>
 
-      <section id="about" class="mt-20">
-        <div class="bg-[#1e1e1e] p-8 rounded-3xl shadow-xl border border-gray-700">
-          <h3 class="text-3xl font-semibold mb-6 text-white">Що в коробці:</h3>
-          <ul class="list-disc pl-6 space-y-3 text-gray-300 text-lg">
+      <section id="about" class="fade-in">
+        <div class="bg-[#1b1b1b] p-10 rounded-3xl shadow-xl border border-gray-700/50">
+          <h3 class="text-3xl font-semibold mb-6 text-amber-200">Що в коробці:</h3>
+          <ul class="list-disc pl-6 space-y-3 text-gray-200 text-lg">
             <li>6 пакетів з деталями, розподіленими за етапами збирання</li>
             <li>Ілюстрована інструкція українською мовою</li>
             <li>Мініфігурки дружинників і купців</li>
             <li>Інтерактивна картка для історичної довідки через мобільний додаток</li>
           </ul>
-          <p class="mt-6 text-gray-400 text-md">Це не просто гра — це подорож у часі! Створи частину славетного Києва власноруч.</p>
+          <p class="mt-6 text-gray-400 text-md italic">
+            Це не просто гра — це подорож у часі! Створи частину славетного Києва власноруч.
+          </p>
         </div>
+      </section>
+
+      <section id="order" class="fade-in text-center">
+        <h3 class="text-3xl font-semibold text-white mb-4">Ціна та замовлення</h3>
+        <p class="text-xl text-green-400 font-bold mb-6">950 грн</p>
+        <a href="https://t.me/buchabrick" target="_blank" class="inline-flex items-center gap-3 bg-gradient-to-r from-blue-500 via-blue-600 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white font-semibold px-6 py-3 rounded-xl transition-all duration-300 shadow-lg hover:scale-105">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12L21.75 3.75L13.5 21.75L11.25 13.5L2.25 12Z" />
+          </svg>
+          Замовити через Telegram
+        </a>
+        <p class="mt-4 text-sm text-gray-400">Швидка відповідь та консультація</p>
+      </section>
+
+      <section class="fade-in text-center max-w-3xl mx-auto">
+        <h4 class="text-xl font-semibold text-white mb-2">Чому саме BuchaBrick?</h4>
+        <p class="text-gray-400">
+          Ми — український бренд, який створює конструктори на основі нашої історії. Кожна модель — це не просто набір, а культурна спадщина у твоїх руках.
+        </p>
+        <p class="mt-4 text-sm text-gray-500">Понад 200+ задоволених покупців. Рекомендовано для шкіл та освітніх гуртків.</p>
       </section>
     </main>
 
     <footer class="text-center py-8 text-sm text-gray-500 bg-[#1e1e1e] border-t border-gray-700 mt-20">
       &copy; 2025 <span class="text-white font-semibold">BuchaBrick</span> — Всі права захищено.
     </footer>
+
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('fade-in');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+
+      document.querySelectorAll('section').forEach(sec => {
+        observer.observe(sec);
+      });
+    </script>
   </body>
 </html>
