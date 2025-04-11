@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Буча.брік - Авторські LEGO-набори</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Хедер -->
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Буча.брік</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#catalog">Каталог</a></li>
+                    <li><a href="#about">Про нас</a></li>
+                    <li><a href="#contact">Контакти</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Головна секція -->
+    <section class="hero">
+        <div class="container">
+            <h2>Авторські LEGO-набори з українськими містами та пам'ятками</h2>
+            <p>Створіть унікальні будівлі України у форматі LEGO з нашими наборами. Київ, Львів, Одеса — це лише початок!</p>
+            <a href="#catalog" class="btn-primary">Переглянути каталог</a>
+        </div>
+    </section>
+
+    <!-- Каталог товарів -->
+    <section id="catalog" class="catalog">
+        <div class="container">
+            <h2>Наші набори</h2>
+            <div class="catalog-grid">
+                <!-- Продукт 1 -->
+                <div class="product-card">
+                    <img src="images/kyiv.jpg" alt="Набір Київ">
+                    <h3>Набір Київ</h3>
+                    <p>Постройте Софійський собор та Золоті ворота в мініатюрі!</p>
+                    <button class="btn-secondary">Купити</button>
+                </div>
+                <!-- Продукт 2 -->
+                <div class="product-card">
+                    <img src="images/lviv.jpg" alt="Набір Львів">
+                    <h3>Набір Львів</h3>
+                    <p>Оживіть історію Львова з цим чудовим набором!</p>
+                    <button class="btn-secondary">Купити</button>
+                </div>
+                <!-- Продукт 3 -->
+                <div class="product-card">
+                    <img src="images/odesa.jpg" alt="Набір Одеса">
+                    <h3>Набір Одеса</h3>
+                    <p>Поглибтесь в атмосферу Одеси, відчуйте дух Потьомкінських сходів!</p>
+                    <button class="btn-secondary">Купити</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Про нас -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>Про нас</h2>
+            <p>Ми спеціалізуємося на створенні авторських наборів LEGO-совместимих конструкторів з українськими містами та пам'ятками. Кожен набір — це маленька історія, яку ви можете побудувати своїми руками.</p>
+        </div>
+    </section>
+
+    <!-- Контакти -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Зв'язатися з нами</h2>
+            <form action="mailto:info@buchabrick.com" method="POST" enctype="text/plain">
+                <input type="text" name="name" placeholder="Ваше ім'я" required>
+                <input type="email" name="email" placeholder="Ваш email" required>
+                <textarea name="message" placeholder="Ваше повідомлення" required></textarea>
+                <button type="submit" class="btn-primary">Відправити</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Футер -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Буча.брік. Усі права захищені.</p>
+        </div>
+    </footer>
+
+    <script src="scripts/app.js"></script>
+</body>
+
+</html>
